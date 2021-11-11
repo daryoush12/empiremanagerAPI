@@ -1,16 +1,15 @@
-const express = require('express')
-const port = '5000'
-const api = express()
-const cors = require('cors')
-const routes = require('./Routes')
-const config = require('./Config')
+const http = require("http");
+const cors = require("cors");
+const { port } = require("./Config");
+const { Server } = require("socket.io");
 
-api.use(express.json())
-api.use(routes)
-api.use(cors)
+const httpserver = http.createServer();
+const io = new Server(httpserver);
 
-api.listen(config.port, () => {
-    console.log(`API listening at http://localhost:${port}`)
-})
+httpserver.listen(port, () => {
+  console.log(`API listening at http://localhost:${port}`);
+});
 
-module.exports = api
+io.on("connection", (evt) => {
+  console.log(`${evt.id} connected`);
+});

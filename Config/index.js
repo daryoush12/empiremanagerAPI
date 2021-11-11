@@ -1,5 +1,3 @@
-const mainConfig = {
-    port: 5000,
-}
-
-module.exports = mainConfig
+module.exports = {
+  port: 5000,
+};
