@@ -1,0 +1,19 @@
+{
+  "name": "rest-api-boilerplate",
+  "version": "0.0.0",
+  "description": "A boilerplate for Rest API project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Daryoush Farsimadan |\u001b    \u001b[D\u001b | farsimadan.daryoush@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@adyen/api-library": "^5.0.1",
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
