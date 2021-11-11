@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "description": "A boilerplate for Rest API project.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "browserify test/*.js | testling",
+    "start": "node ./src/index.js"
   },
   "author": "Daryoush Farsimadan |\u001b    \u001b[D\u001b | farsimadan.daryoush@gmail.com",
   "license": "MIT",
@@ -15,6 +16,10 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "socket.io": "^4.3.2"
+    "socket.io": "^4.3.2",
+    "toad-scheduler": "^1.6.0"
+  },
+  "devDependencies": {
+    "tape": "^5.3.1"
   }
 }
