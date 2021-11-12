@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  mongodb:
+    image: mongodb:latest
+  app:
+    build:
+      context: "./"
